@@ -1,0 +1,120 @@
+.homePageScreen {
+    max-width: 100%; /* Ensure the image doesn't exceed the screen width */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;  /* Centering image if needed */
+    margin: 0 auto;  /* Centering image horizontally */     
+}
+
+.home {
+    width: 10px;   /* Set desired width */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+
+.imageContainer {
+    position: relative;        
+    width: 100vw;              
+    height: 100vh; 
+}
+
+.navbar {
+    position: absolute;        /* Make the navbar float on top of the image */
+    top: 20px;                 /* Distance from the top of the container */
+    right: 40px;               /* Distance from the right */
+    display: flex;
+    gap: 20px;                 /* Spacing between the links */
+    justify-content: flex-end; /* Align buttons to the right */
+    z-index: 10;               /* Ensure the navbar appears over the image */
+}
+
+/* Styling the list of links */
+.navbar ul {
+    display: flex;
+    list-style: none;          /* Remove default bullet points */
+    gap: 30px;                 /* Adds spacing between the list items */
+    align-items: center;       /* Vertically center the items */
+}
+
+/* Styling individual navigation links */
+.navbar li a {
+    text-decoration: none;
+    color: black;              /* Customize the color */
+    font-family: 'Inter';
+    font-size: 1rem;           /* Adjust the size as needed */
+    font-weight: bold;
+}
+
+.navbar li a:hover {
+    text-decoration: underline;
+    transition: width 1s ease;
+}
+
+/* Email icon styling */
+.navbar li a img {
+    width: 20px;    /* Set the size for the email icon */
+    height: auto;
+}
+
+nav a.workBtn:hover {
+    color: #DE3737;
+}
+
+nav a.designBtn:hover {
+    color: #373FDE
+}
+
+nav a.aboutMeBtn:hover {
+    color: #37DE42;
+}
+
+nav a.resume:hover {
+    color: black;  /* Change color specifically for resume link */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        top: 10px;
+        right: 20px;
+    }
+
+    .navbar ul {
+        gap: 10px; /* Reduce gap between links for smaller screens */
+    }
+}
+
+/* DESIGN HOME SCREEN */
+.designContent {
+    display: flex;          /* Use flexbox to lay out the sidebar and content side by side */
+    height: calc(100vh - 60px); /* Full height minus navbar height (adjust as needed) */
+    margin-top: 30px;
+}
+
+.sideBar {
+    position: sticky; /* or you can use position: fixed */
+    top: 50%;           /* Sticks to the top when scrolled */
+    width: 35%;       /* Set width for the stagnant side */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is inside the width */
+}
+
+.sideBar img {
+    width: 100%;        /* Let the image take up the full width of the sidebar */
+    height: auto;       /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image is not distorted */
+}
+
+/* Content: Right side that scrolls */
+.content {
+    width: 65%;      /* Takes the remaining width */
+    padding: 20px;
+    overflow-y: auto; /* Enables vertical scrolling on this side */
+    height: 100vh;   /* Full height */
+}
+
+.content img {
+    max-width: 100%;   /* Ensure the image doesn't exceed the container's width */
+    height: auto;      /* Maintain the aspect ratio */
+    object-fit: cover; /* Fills the content area without distortion; might crop some parts */
+}
+
