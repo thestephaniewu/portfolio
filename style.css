@@ -1,3 +1,7 @@
+body {
+    background-color: #F9F9F9
+}
+
 .homePageScreen {
     max-width: 100%; /* Ensure the image doesn't exceed the screen width */
     height: auto;    /* Maintain aspect ratio */
@@ -5,9 +9,11 @@
     margin: 0 auto;  /* Centering image horizontally */     
 }
 
-.home {
-    width: 10px;   /* Set desired width */
-    height: auto;  /* Maintain aspect ratio */
+.home img {
+    width: 150px;   /* Set the desired width for your logo */
+    height: auto;  /* Maintain the aspect ratio */
+    padding-top: 38px;  
+    padding-left: 30px;
 }
 
 
@@ -83,6 +89,38 @@ nav a.resume:hover {
     }
 }
 
+/* This shows the animated arrow */
+
+.arrow-container {
+    position: absolute;
+    top: 83%;  /* Move the arrow closer to the top */
+    left: 50%;
+    transform: translateX(-50%); /* Keep it centered */
+    text-align: center;
+  }
+  .arrow-container h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* The animated arrow */
+  .arrow {
+    font-size: 30px;
+    animation: moveArrow 1s infinite alternate;
+  }
+
+  /* Keyframes for the up and down animation */
+  @keyframes moveArrow {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(15px);
+    }
+  }
+
+/* ------------------------------------------------------ */
 /* DESIGN HOME SCREEN */
 .designContent {
     display: flex;          /* Use flexbox to lay out the sidebar and content side by side */
@@ -117,4 +155,23 @@ nav a.resume:hover {
     height: auto;      /* Maintain the aspect ratio */
     object-fit: cover; /* Fills the content area without distortion; might crop some parts */
 }
+
+/* ------------------------------------------------------ */
+
+/* About Me Content */
+.aboutImage-container {
+    display: flex;               /* Enable flexbox */
+    justify-content: center;     /* Center the image horizontally */
+    align-items: center;         /* Center the image vertically */
+    height: 100vh;               /* Full viewport height for vertical centering */
+    margin-top: 200px;
+    
+}
+
+/* Ensuring the image is responsive */
+.aboutMeScreen {
+    max-width: 65%;    /* Ensure the image does not overflow */
+    height: auto;       /* Maintain the aspect ratio */
+}
+
 
